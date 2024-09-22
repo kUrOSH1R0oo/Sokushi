@@ -16,7 +16,7 @@ def connect_to_server():
     while True:
         try:
             sock = socket.socket()
-            sock.connect(("192.168.43.26", 8080))
+            sock.connect(("127.0.0.1", 8080))
             print("Connected to server.")
             return sock
         except Exception as e:
