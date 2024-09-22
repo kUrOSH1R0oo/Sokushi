@@ -27,7 +27,8 @@ Sokushi Spyware, developed by A1SBERG, is a potent surveillance tool that establ
    ```
 *Remember to configure the payload based on the server to avoid complications and errors.*
 
-## Now to make it persistent and run without Python Compiler installed, you can follow the instructions in Kiroku Keylogger:>>
+## Now to make it persistent and run without Python Compiler installed
+- You can follow the steps in Kiroku Keylogger ![here](https://github.com/Kuraiyume/Kiroku), the procedure will be the same.
 
 ## Legal Disclaimer
 - This software is intended for educational purposes only. The author is not responsible for any illegal use of this tool. Misuse of this software can result in criminal charges being brought against the individuals in question. The user is solely responsible for compliance with all local laws.
