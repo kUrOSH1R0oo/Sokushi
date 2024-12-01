@@ -11,7 +11,7 @@ Sokushi Spyware, developed by A1SBERG, is a potent surveillance tool that establ
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/Kuraiyume/Sokushi
+   git clone https://github.com/kUrOSH1R0oo/Sokushi
    ```
 2. Install the requirements:
    ```bash
