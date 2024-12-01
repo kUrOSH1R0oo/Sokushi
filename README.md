@@ -37,5 +37,5 @@ Sokushi Spyware, developed by A1SBERG, is a potent surveillance tool that establ
 - Sokushi is licensed under MIT License
 
 ## Author
-- Kuraiyume (A1SBERG)
+- Kuroshiro (A1SBERG)
 
